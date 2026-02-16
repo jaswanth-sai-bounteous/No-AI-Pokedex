@@ -1,6 +1,8 @@
+import type{ PokemonAll } from "../types/Pokemon";
+
 const API_URI="https://pokeapi.co/api/v2/pokemon"
 
-import type{ Pokemon, PokemonAll } from "../types/Pokemon";
+
 export const PokeService={
 
     getAll:async():Promise<PokemonAll[]>=>{

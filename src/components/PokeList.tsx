@@ -10,12 +10,7 @@ const PokeList = () => {
         })
     },[])
 
-    useEffect(()=>{
-          PokeService.getId(4).then((data)=>{
-            console.log(data.weight)
-     
-    });
-    },[])
+  
   
     
   return (
