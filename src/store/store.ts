@@ -33,25 +33,20 @@ export const catchPokemonAtom = atom(
       return;
     }
 
-   
-
     set(caughtPokemonAtom, [...caught, pokemon]);
-  }
+  },
 );
 
 //  Release Pokémon atom (write-only)
-export const releasePokemonAtom = atom(
-  null,
-  (get, set, id: number) => {
-    const caught = get(caughtPokemonAtom);
-    set(
-      caughtPokemonAtom,
-      caught.filter((p) => p.id !== id)
-    );
-  }
-);
+export const releasePokemonAtom = atom(null, (get, set, id: number) => {
+  const caught = get(caughtPokemonAtom);
+  set(
+    caughtPokemonAtom,
+    caught.filter((p) => p.id !== id),
+  );
+});
 
-//  Derived atom for count
+
 export const caughtCountAtom = atom((get) => {
   return get(caughtPokemonAtom).length;
 });

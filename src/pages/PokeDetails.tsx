@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { PokeService } from "../services/PokeService";
-import { Navigate, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import type { Pokemon } from "../types/Pokemon";
 import { useSetAtom } from "jotai";

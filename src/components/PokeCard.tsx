@@ -8,7 +8,8 @@ interface cardProps {
 
 const PokeCard = ({ id, name }: cardProps) => {
 
-   
+    
+
   return (
     <Link to={`/detail/${id}`}>
     <div className="card bg-base-100 w-full shadow-sm">
